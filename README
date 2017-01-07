@@ -1,0 +1,21 @@
+This project was started to make tools that help to calculate CNC settings.
+
+The source files so far only contain one module, with one function in it.
+
+Module: cnc.calc
+Function: cnc_calc(i_data)
+
+This functions returns a tuple containing a key (str) and a value (float).
+
+The :i_data parameter is necessary, and should be modified to the data available. The parameter which one wishes to 
+have calculated, should be left with the value 0.
+
+Data structure:
+  i_data = {
+        "rpm": 0, #ex. 15000 - 18000
+        "cl_mm": 0.0, #cut load mm, ex. 0.38
+        "fr_mmin": 0.0, #feed rate mm/min, ex. 80
+        "n_teeth": 0, #no of teeth, ex. 1 for single flute
+        "cut_depth": 1.0    #cut-depth in times of bit diameter
+                            #reduces chip if bigger than 1.0
+        }
